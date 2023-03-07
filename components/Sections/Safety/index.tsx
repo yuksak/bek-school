@@ -7,7 +7,7 @@ export const Safety = () => {
       <SectionTitle title="Безопасность и комфорт" />
       <div className="flex flex-row flex-wrap justify-between gap-6">
         {safeties.map((data, i) => (
-          <SafetyCard {...data} orderNumber={i + 1} />
+          <SafetyCard {...data} orderNumber={i + 1} key={data.id} />
         ))}
       </div>
     </div>
