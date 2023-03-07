@@ -8,7 +8,7 @@ import photo3 from '../../../public/images/reviewer-3.png'
 export const Reviews = () => {
   return (
     <div className="mx-auto w-[1142px] py-8">
-      <SectionTitle title="Отзывы" path="//" />
+      <SectionTitle title="Отзывы" path="/reviews" />
       <div className="grid grid-flow-col grid-cols-3">
         {reviewers.map((reviewer) => (
           <ReviewsCard {...reviewer} key={reviewer.name} />
