@@ -2,12 +2,12 @@ import { FaTelegramPlane } from 'react-icons/fa'
 import { Call, Facebook, Instagram, Location, Sms } from 'iconsax-react'
 
 import ContactCard from '../../ContactCard'
-import { SectionTitle } from '../../UI'
-import { YandexMap } from '../../YandexMap'
+import SectionTitle from '../../SectionTitle'
+import YandexMap from '../../YandexMap'
 
 export const ContactUs = () => {
   return (
-    <div className=" mx-auto mb-8 flex max-w-[1142px] flex-col py-14">
+    <div className="flex flex-col">
       <SectionTitle title="Свяжитесь с нами" />
       <div className="mb-6 grid grid-flow-row grid-cols-3 gap-6">
         {contacts.map(({ title, icon, path, content }) => (
