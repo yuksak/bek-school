@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 
 import { Instagram, Facebook, Youtube } from 'iconsax-react'
 import { FaTelegramPlane } from 'react-icons/fa'
@@ -34,7 +33,7 @@ const Socials = () => {
         <Link
           key={name}
           href={path}
-          className="rounded-full bg-yellow p-1.5 text-grey-dark hover:text-yellow"
+          className="rounded-full bg-yellow p-1.5 text-grey-dark hover:bg-light hover:text-inherit"
         >
           {logo}
         </Link>
