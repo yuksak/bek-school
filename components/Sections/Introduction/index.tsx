@@ -1,7 +1,6 @@
 import Image from 'next/image'
-import React from 'react'
+import Logo from '../../Logo'
 import intro from '../../../public/images/intro.png'
-import { Logo } from '../../UI'
 
 export const Introduction = () => {
   return (
