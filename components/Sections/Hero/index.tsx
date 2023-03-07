@@ -17,7 +17,9 @@ export const Hero = () => {
           <h1 className="text-2xl font-bold text-grey-darkest">
             Исамухамедова Дильфуза Садриддиновна
           </h1>
-          <p className="font-medium text-grey">Директор НОУ "Future education", школа “Bek”</p>
+          <p className="font-medium text-grey">
+            Директор НОУ &quot;Future education&quot;, школа “Bek”
+          </p>
         </div>
       </div>
     </InfoBanner>
