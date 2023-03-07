@@ -1,7 +1,7 @@
 import React from 'react'
 import { YMaps, Map, Placemark, ZoomControl } from '@pbe/react-yandex-maps'
 
-export const YandexMap = () => {
+const YandexMap = () => {
   const defaultState = {
     center: [41.341176, 69.242969],
     zoom: 17,
@@ -10,7 +10,7 @@ export const YandexMap = () => {
 
   return (
     <YMaps>
-      <div className=" overflow-hidden rounded-2xl">
+      <div className="overflow-hidden rounded-2xl">
         <Map defaultState={defaultState} width={1140} height={445}>
           <ZoomControl options={{ adjustMapMargin: true }} />
           <Placemark
@@ -24,3 +24,5 @@ export const YandexMap = () => {
     </YMaps>
   )
 }
+
+export default YandexMap
