@@ -18,7 +18,7 @@ const SectionTitle: FC<ISectionTitleProps> = ({ title, path, position }) => {
             : `justify-${position ? position : 'center text-center'}`
         }`}
       >
-        <h1 className="w-[500px] text-4xl font-semibold">{title}</h1>
+        <h1 className="w-[590px] text-[42px] font-semibold leading-[50px]">{title}</h1>
         {path && (
           <Link
             href={path}
