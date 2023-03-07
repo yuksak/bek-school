@@ -9,13 +9,16 @@ module.exports = {
     extend: {
       fontFamily: { gilroy: ['Gilroy', 'sans-serif'] },
       colors: {
-        dark: {
-          light: '#797C80',
-          DEFAULT: '#232626',
-          deep: '#0E0E0E',
+        grey: {
+          DEFAULT: '#797C80',
+          dark: '#232626',
+          darkest: '#0E0E0E',
         },
-        light: '#FFFFFF',
-        yellow: '#FED363',
+        light: { DEFAULT: '#FFFFFF', dark: '#F8F8F8' },
+        yellow: {
+          light: '#FFF9E3',
+          DEFAULT: '#FED363',
+        },
       },
       screens: {
         lg: '1024px',
