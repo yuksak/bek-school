@@ -2,12 +2,16 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import {
+  AboutUs,
   Admission,
   ContactUs,
   Cooperate,
   Differences,
+  Experience,
+  Hero,
   Introduction,
   News,
+  OurMission,
   Reviews,
   Safety,
 } from '../components/Sections'
@@ -23,13 +27,19 @@ const Home: NextPage = () => {
 
       <main>
         <Introduction />
-        <Differences />
-        <Safety />
-        <Cooperate />
-        <Admission />
-        <Reviews />
-        <News />
-        <ContactUs />
+        <div className="mx-auto my-24 flex max-w-[1142px] flex-col gap-24">
+          <Hero />
+          <OurMission />
+          <Differences />
+          <AboutUs />
+          <Safety />
+          <Experience />
+          <Cooperate />
+          <Admission />
+          <Reviews />
+          <News />
+          <ContactUs />
+        </div>
       </main>
     </div>
   )
