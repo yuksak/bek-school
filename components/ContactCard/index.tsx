@@ -18,7 +18,7 @@ const ContactCard: FC<IContactedCardProps> = ({ title, content, path, children }
       <div className=" rounded-xl bg-light p-3">{children}</div>
       <div className="flex flex-col text-grey-darkest">
         <span className="text-sm font-medium">{title}</span>
-        <span className="text-lg font-bold">{content}</span>
+        <span className="text-lg font-semibold">{content}</span>
       </div>
     </div>
   )
