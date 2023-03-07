@@ -4,7 +4,7 @@ interface IButton {
   children?: React.ReactNode
 }
 
-export const Button = ({ onClick, text, children }: IButton) => {
+const Button = ({ onClick, text, children }: IButton) => {
   return (
     <button
       onClick={onClick}
@@ -16,3 +16,5 @@ export const Button = ({ onClick, text, children }: IButton) => {
     </button>
   )
 }
+
+export default Button
