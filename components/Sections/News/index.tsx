@@ -9,7 +9,7 @@ import photo4 from '../../../public/images/news-pic-4.png'
 export const News = () => {
   return (
     <div className="mx-auto max-w-[1142px]">
-      <SectionTitle title="Новости" path="/ss" />
+      <SectionTitle title="Новости" path="/news" />
       <div className="grid grid-flow-col grid-cols-4">
         {news.map((card) => (
           <NewsCard {...card} key={card.title} />
