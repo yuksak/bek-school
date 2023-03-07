@@ -11,13 +11,16 @@ export const Hero = () => {
           решения задач любой сложности, личность, которая быстро адаптируется к изменениям вокруг.
           <br />
           <br />
-          “Мы хотим видеть ребенка в поисках знаний, а не знания в погоне за ребенком” - Бернард Шоу
+          &rdquo;Мы хотим видеть ребенка в поисках знаний, а не знания в погоне за ребенком&ldquo; -
+          Бернард Шоу
         </p>
         <div>
           <h1 className="text-2xl font-bold text-grey-darkest">
             Исамухамедова Дильфуза Садриддиновна
           </h1>
-          <p className="font-medium text-grey">Директор НОУ "Future education", школа “Bek”</p>
+          <p className="font-medium text-grey">
+            Директор НОУ "Future education", школа &rdquo;Bek&ldquo;
+          </p>
         </div>
       </div>
     </InfoBanner>
