@@ -19,7 +19,7 @@ export const Hero = () => {
             Исамухамедова Дильфуза Садриддиновна
           </h1>
           <p className="font-medium text-grey">
-            Директор НОУ "Future education", школа &rdquo;Bek&ldquo;
+            Директор НОУ &rdquo;Future education&ldquo;, школа &rdquo;Bek&ldquo;
           </p>
         </div>
       </div>
