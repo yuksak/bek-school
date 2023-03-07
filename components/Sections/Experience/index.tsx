@@ -13,7 +13,16 @@ export const Experience = () => {
       description="Школа «Bek» оказывает образовательные услуги только на русском языке. Основные уроки проводятся по учебной программе, утверждённой МНО, но в процессе преподавания на уроках используются дополнительные материалы с разных источников- как российских, так и зарубежных изданий."
       link="/experience"
     >
-      <VideoPlayer src="/video/education.mp4" poster="/images/experience-thumbnail.png" />
+      {/* <VideoPlayer src="https://youtu.be/a43-qyyeZ88" poster="/images/experience-thumbnail.png" /> */}
+      <iframe
+        className="rounded-3xl"
+        width="1142"
+        allowFullScreen
+        height="445"
+        src="https://www.youtube.com/embed/a43-qyyeZ88"
+        title="Школа Бек за Мир!"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      />
     </SloganBanner>
   )
 }
