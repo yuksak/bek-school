@@ -1,10 +1,9 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import React from 'react'
+import Logo from '../Logo'
 
 import { useScrollPosition } from '../../hooks/useScrollPosition'
 import { ArrowDown2, Menu } from 'iconsax-react'
-import { Logo } from '../UI'
 
 export const navRoutes = [
   { path: '/', name: 'Главная' },
@@ -28,7 +27,7 @@ export const Header = () => {
           isScrollable ? 'bg-light shadow-lg' : ''
         } ${!isHome && 'bg-light'}`}
       >
-        <div className="mx-auto flex w-[1142px] flex-wrap items-center justify-between">
+        <div className="mx-auto flex max-w-[1142px] flex-wrap items-center justify-between">
           <Logo variant={isHome && !isScrollable ? 'light' : 'dark'} size={51} />
           <button
             data-collapse-toggle="navbar-multi-level"
