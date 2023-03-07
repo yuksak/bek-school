@@ -1,12 +1,12 @@
-import React from 'react'
 import AdmissionCard from '../../AdmissionCard'
-import { SectionTitle } from '../../UI'
 
 export const Admission = () => {
   return (
-    <div className="mx-auto flex w-[1142px] justify-center rounded-3xl bg-light-dark p-20 pt-10">
+    <div className="flex justify-center rounded-3xl bg-light-dark p-20 pt-10">
       <div className="w-[752px]">
-        <SectionTitle title="Как поступить в школу" />
+        <h1 className="mt-10 text-center text-[42px] font-semibold text-grey-darkest">
+          Как поступить в школу
+        </h1>
         <p className="mx-auto mb-12 w-[533px] text-center text-2xl text-grey">
           Поступление в школу состоит из нескольких простых шагов
         </p>
