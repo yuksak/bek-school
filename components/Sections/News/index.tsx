@@ -1,4 +1,4 @@
-import { SectionTitle } from '../../UI'
+import SectionTitle from '../../SectionTitle'
 import NewsCard from '../../NewsCard'
 
 import photo1 from '../../../public/images/news-pic-1.png'
@@ -8,9 +8,9 @@ import photo4 from '../../../public/images/news-pic-4.png'
 
 export const News = () => {
   return (
-    <div className="mx-auto max-w-[1142px]">
+    <div>
       <SectionTitle title="Новости" path="/news" />
-      <div className="grid grid-flow-col grid-cols-4">
+      <div className="flex flex-row justify-between">
         {news.map((card) => (
           <NewsCard {...card} key={card.title} />
         ))}
