@@ -1,5 +1,4 @@
-import React from 'react'
-import { SectionTitle } from '../../UI'
+import SectionTitle from '../../SectionTitle'
 
 export const Gallery = () => {
   return (
