@@ -1,14 +1,13 @@
 import Link from 'next/link'
-import React from 'react'
 import { Call, Sms, Location } from 'iconsax-react'
 
-import { Logo } from '../UI'
 import Socials from '../Socials'
+import Logo from '../Logo'
 
 const Footer = () => {
   return (
-    <footer className="mt-auto bg-grey-dark py-16 px-2">
-      <div className="container mx-auto flex justify-between">
+    <footer className="mt-auto bg-grey-dark px-2 pt-16 pb-8">
+      <div className="mx-auto mb-10 flex w-[1142px] justify-between">
         <div className="flex flex-col gap-6">
           <Logo variant="light" size={59} />
           <Socials />
@@ -45,9 +44,9 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        {/* <div className="text-center">
-          <span className="text-dark-light">© BekSchool. Все права защищены.</span>
-        </div> */}
+      </div>
+      <div className="text-center">
+        <span className="text-grey">© BekSchool. Все права защищены.</span>
       </div>
     </footer>
   )
