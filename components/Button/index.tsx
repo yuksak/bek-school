@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface IButton {
   text?: string
   onClick?: () => void
@@ -12,7 +10,7 @@ export const Button = ({ onClick, text, children }: IButton) => {
       onClick={onClick}
       className={`${
         text ? 'rounded-xl py-3 px-5' : 'rounded-full p-3'
-      } flex gap-2  border border-dark-deep border-transparent bg-yellow font-semibold hover:border-yellow hover:bg-transparent focus:border-dark-deep`}
+      } border-dark-deep focus:border-dark-deep  flex gap-2 border border-transparent bg-yellow font-semibold hover:border-yellow hover:bg-transparent`}
     >
       {children && children} {text && text}
     </button>

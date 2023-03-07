@@ -1,16 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import logoLight from '../../../public/images/logo.svg'
-import logoDark from '../../../public/images/logo-dark.svg'
-import logoGrey from '../../../public/images/logo-grey.svg'
+import logoLight from '../../public/images/logo.svg'
+import logoDark from '../../public/images/logo-dark.svg'
+import logoGrey from '../../public/images/logo-grey.svg'
 
 interface ILogo {
   variant: 'light' | 'dark' | 'grey'
   size?: number
 }
 
-export const Logo = ({ variant, size }: ILogo) => {
+const Logo = ({ variant, size }: ILogo) => {
   let logoVariant
   let height
 
@@ -33,3 +33,5 @@ export const Logo = ({ variant, size }: ILogo) => {
     </Link>
   )
 }
+
+export default Logo

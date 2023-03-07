@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { MdArrowOutward } from 'react-icons/md'
 
 interface ISectionTitleProps {
@@ -8,9 +8,9 @@ interface ISectionTitleProps {
   position?: 'start' | 'end'
 }
 
-export const SectionTitle: FC<ISectionTitleProps> = ({ title, path, position }) => {
+const SectionTitle: FC<ISectionTitleProps> = ({ title, path, position }) => {
   return (
-    <div className="mx-auto my-8 mt-10 max-w-[1142px]">
+    <div className="mb-8">
       <div
         className={`flex flex-row items-center text-grey-darkest ${
           title && path
@@ -31,3 +31,5 @@ export const SectionTitle: FC<ISectionTitleProps> = ({ title, path, position }) 
     </div>
   )
 }
+
+export default SectionTitle
