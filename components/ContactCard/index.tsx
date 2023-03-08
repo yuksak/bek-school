@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router'
 import { FC, ReactNode } from 'react'
+import { motion } from 'framer-motion'
+import { cardAnimation } from '../../animation'
 
 interface IContactedCardProps {
   title: string
@@ -11,7 +13,8 @@ interface IContactedCardProps {
 const ContactCard: FC<IContactedCardProps> = ({ title, content, path, children }) => {
   const router = useRouter()
   return (
-    <div
+    <motion.div
+      variants={cardAnimation}
       onClick={() => router.push(path)}
       className="box-border flex w-[365px] cursor-pointer flex-row items-center gap-4 rounded-2xl border border-transparent bg-light-dark p-6 hover:border-grey"
     >
@@ -20,7 +23,7 @@ const ContactCard: FC<IContactedCardProps> = ({ title, content, path, children }
         <span className="text-sm font-medium">{title}</span>
         <span className="text-lg font-semibold">{content}</span>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
