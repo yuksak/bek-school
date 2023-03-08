@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 import SectionTitle from '../../SectionTitle'
 import NewsCard from '../../NewsCard'
 
@@ -10,11 +12,17 @@ export const News = () => {
   return (
     <div>
       <SectionTitle title="Новости" path="/news" />
-      <div className="flex flex-row justify-between">
+      <motion.div
+        className="flex flex-row justify-between"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+      >
         {news.map((card) => (
           <NewsCard {...card} key={card.title} />
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }
