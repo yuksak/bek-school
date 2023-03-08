@@ -1,5 +1,7 @@
 import Link from 'next/link'
-import React, { FC } from 'react'
+import { FC } from 'react'
+import { delay, motion } from 'framer-motion'
+
 import { IBreadCrumbs } from '../../types'
 
 interface IBreadCrumbProps {
@@ -8,7 +10,11 @@ interface IBreadCrumbProps {
 
 const BreadCrumb: FC<IBreadCrumbProps> = ({ breadCrumbs }) => {
   return (
-    <div className="container mx-auto">
+    <motion.div
+      className="container mx-auto"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 1 } }}
+    >
       {breadCrumbs.length && (
         <ol className="flex flex-row gap-2 text-grey">
           {breadCrumbs.map(({ path, name }, i) => (
@@ -23,7 +29,7 @@ const BreadCrumb: FC<IBreadCrumbProps> = ({ breadCrumbs }) => {
           ))}
         </ol>
       )}
-    </div>
+    </motion.div>
   )
 }
 
