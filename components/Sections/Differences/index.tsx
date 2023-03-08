@@ -15,7 +15,7 @@ export const Differences = () => {
         transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
       >
         {datas.map((data, i) => (
-          <DifferencesCard {...data} orderNumber={i + 1} />
+          <DifferencesCard {...data} orderNumber={i + 1} key={data.title} />
         ))}
       </motion.div>
     </div>
