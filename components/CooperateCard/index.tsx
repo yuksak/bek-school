@@ -2,7 +2,9 @@ import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 
+import { motion } from 'framer-motion'
 import { MdArrowOutward } from 'react-icons/md'
+import { cardAnimation } from '../../animation'
 
 interface ICooperateCardProps {
   image: StaticImageData
@@ -13,7 +15,10 @@ interface ICooperateCardProps {
 
 const CooperateCard: FC<ICooperateCardProps> = ({ image, title, description, path }) => {
   return (
-    <div className="flex w-[364px] flex-col gap-6 rounded-2xl bg-light-dark py-9 px-6">
+    <motion.div
+      variants={cardAnimation}
+      className="flex w-[364px] flex-col gap-6 rounded-2xl bg-light-dark py-9 px-6"
+    >
       <div className="flex flex-row items-center gap-6">
         <Image src={image} alt="" />
         <h1 className=" text-xl font-semibold">{title}</h1>
@@ -27,7 +32,7 @@ const CooperateCard: FC<ICooperateCardProps> = ({ image, title, description, pat
           Подробнее <MdArrowOutward className=" h-5 w-5" />
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
