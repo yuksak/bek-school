@@ -1,4 +1,5 @@
 import { FaTelegramPlane } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 import { Call, Facebook, Instagram, Location, Sms } from 'iconsax-react'
 
 import ContactCard from '../../ContactCard'
@@ -9,13 +10,19 @@ export const ContactUs = () => {
   return (
     <div className="flex flex-col">
       <SectionTitle title="Свяжитесь с нами" />
-      <div className="mb-6 grid grid-flow-row grid-cols-3 gap-6">
+      <motion.div
+        className="mb-6 grid grid-flow-row grid-cols-3 gap-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+      >
         {contacts.map(({ title, icon, path, content }) => (
           <ContactCard key={path} title={title} path={path} content={content}>
             {icon}
           </ContactCard>
         ))}
-      </div>
+      </motion.div>
       <YandexMap />
     </div>
   )
