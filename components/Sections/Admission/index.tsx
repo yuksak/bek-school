@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import AdmissionCard from '../../AdmissionCard'
 
 export const Admission = () => {
@@ -10,11 +11,17 @@ export const Admission = () => {
         <p className="mx-auto mb-12 w-[533px] text-center text-2xl text-grey">
           Поступление в школу состоит из нескольких простых шагов
         </p>
-        <div className="flex flex-col gap-5">
+        <motion.div
+          className="flex flex-col gap-5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+        >
           {admissionSteps.map((step, i) => (
             <AdmissionCard {...step} index={i + 1} key={step.description} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   )
