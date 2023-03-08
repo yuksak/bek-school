@@ -2,15 +2,37 @@ import { motion } from 'framer-motion'
 import AdmissionCard from '../../AdmissionCard'
 
 export const Admission = () => {
+  const titleVariant = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { delay: 0.5, duration: 1 } },
+  }
+
+  const textVariant = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
+  }
+
   return (
     <div className="flex justify-center rounded-3xl bg-light-dark p-20 pt-10">
-      <div className="w-[752px]">
-        <h1 className="mt-10 text-center text-[42px] font-semibold text-grey-darkest">
+      <motion.div
+        className="w-[752px]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+      >
+        <motion.h1
+          className="mt-10 text-center text-[42px] font-semibold text-grey-darkest"
+          variants={titleVariant}
+        >
           Как поступить в школу
-        </h1>
-        <p className="mx-auto mb-12 w-[533px] text-center text-2xl text-grey">
+        </motion.h1>
+        <motion.p
+          className="mx-auto mb-12 w-[533px] text-center text-2xl text-grey"
+          variants={textVariant}
+        >
           Поступление в школу состоит из нескольких простых шагов
-        </p>
+        </motion.p>
         <motion.div
           className="flex flex-col gap-5"
           initial="hidden"
@@ -22,7 +44,7 @@ export const Admission = () => {
             <AdmissionCard {...step} index={i + 1} key={step.description} />
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   )
 }
