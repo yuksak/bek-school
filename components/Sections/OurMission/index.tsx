@@ -1,9 +1,27 @@
+import { motion } from 'framer-motion'
+
 import SloganBanner from '../../SloganBanner'
 import missionImage from '../../../public/images/sec-mission-image.png'
 
 export const OurMission = () => {
+  const container = {
+    visible: {
+      y: 0,
+      transition: { duration: 1 },
+    },
+    hidden: {
+      y: 200,
+      transition: { duration: 1 },
+    },
+  }
+
   return (
-    <div>
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <SloganBanner
         title="Наша миссия - помогать всем и каждому"
         description="Школа «Bek» оказывает образовательные услуги только на русском языке. Основные уроки
@@ -12,6 +30,6 @@ export const OurMission = () => {
       зарубежных изданий."
         image={missionImage}
       />
-    </div>
+    </motion.div>
   )
 }
