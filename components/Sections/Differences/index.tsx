@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 import DifferencesCard from '../../DifferencesCard'
 import SectionTitle from '../../SectionTitle'
 
@@ -5,11 +7,17 @@ export const Differences = () => {
   return (
     <div>
       <SectionTitle title="Чем отличается школа “Bek” от других школ" />
-      <div className="grid grid-flow-row grid-cols-3 gap-6">
+      <motion.div
+        className="grid grid-flow-row grid-cols-3 gap-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+      >
         {datas.map((data, i) => (
-          <DifferencesCard {...data} key={data.id} orderNumber={i + 1} />
+          <DifferencesCard {...data} orderNumber={i + 1} />
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }
