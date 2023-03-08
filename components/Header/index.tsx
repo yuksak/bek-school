@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+
 import Logo from '../Logo'
 
 import { useScrollPosition } from '../../hooks/useScrollPosition'
@@ -26,7 +27,7 @@ export const Header = () => {
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
+        transition={{ duration: 1 }}
         className={`fixed z-50 w-full py-4 px-2 transition-all duration-150 ease-in ${
           isScrollable ? 'bg-light shadow-lg' : ''
         } ${!isHome && 'bg-light'}`}
