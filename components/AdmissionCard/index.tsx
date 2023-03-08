@@ -1,5 +1,8 @@
 import { FC } from 'react'
+import { motion } from 'framer-motion'
+
 import Chip from './Chip'
+import { cardAnimation } from '../../animation'
 
 interface IAdmissionCardProps {
   index: number
@@ -9,7 +12,7 @@ interface IAdmissionCardProps {
 
 const AdmissionCard: FC<IAdmissionCardProps> = ({ index, description, info }) => {
   return (
-    <div>
+    <motion.div variants={cardAnimation}>
       <div className="flex w-[752px] flex-row items-center gap-5 rounded-2xl bg-light p-6">
         <div className="flex h-[51px] w-[51px] items-center justify-center rounded-full bg-yellow text-2xl font-semibold text-grey-darkest">
           {index}
@@ -18,7 +21,7 @@ const AdmissionCard: FC<IAdmissionCardProps> = ({ index, description, info }) =>
           {description} {info && <Chip>{info}</Chip>}
         </p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
