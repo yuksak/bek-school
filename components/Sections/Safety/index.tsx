@@ -1,16 +1,23 @@
+import { motion } from 'framer-motion'
+
 import SafetyCard from '../../SafetyCard'
 import SectionTitle from '../../SectionTitle'
 
 export const Safety = () => {
   return (
-    <div>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+      viewport={{ once: true }}
+    >
       <SectionTitle title="Безопасность и комфорт" />
       <div className="flex flex-row flex-wrap justify-between gap-6">
         {safeties.map((data, i) => (
           <SafetyCard {...data} orderNumber={i + 1} key={data.id} />
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 
