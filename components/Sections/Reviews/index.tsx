@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 import SectionTitle from '../../SectionTitle'
 import ReviewsCard from '../../ReviewsCard'
 
@@ -7,14 +9,19 @@ import photo3 from '../../../public/images/reviewer-3.png'
 
 export const Reviews = () => {
   return (
-    <div>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+    >
       <SectionTitle title="Отзывы" path="/reviews" />
       <div className="flex flex-row justify-between">
         {reviewers.map((reviewer) => (
           <ReviewsCard {...reviewer} key={reviewer.name} />
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 
