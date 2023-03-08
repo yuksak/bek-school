@@ -1,6 +1,8 @@
 import Image, { StaticImageData } from 'next/image'
-import React, { FC } from 'react'
+import { FC } from 'react'
 
+import { motion } from 'framer-motion'
+import { cardAnimation } from '../../animation'
 interface INewsCardProps {
   image: StaticImageData
   title: string
@@ -10,7 +12,10 @@ interface INewsCardProps {
 
 const NewsCard: FC<INewsCardProps> = ({ image, title, description, date }) => {
   return (
-    <div className="box-border flex w-[267px] flex-col gap-2 overflow-hidden">
+    <motion.div
+      className="box-border flex w-[267px] flex-col gap-2 overflow-hidden"
+      variants={cardAnimation}
+    >
       <div className=" rounded-2xl">
         <Image src={image} alt="" width={267} height={190} />
       </div>
@@ -19,7 +24,7 @@ const NewsCard: FC<INewsCardProps> = ({ image, title, description, date }) => {
         <p className="font-normal text-grey">{description}</p>
         <time className="text-sm italic text-grey">{date}</time>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
