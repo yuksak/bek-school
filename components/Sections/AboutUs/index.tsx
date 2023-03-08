@@ -1,9 +1,26 @@
 import InfoBanner from '../../InfoBanner'
 import aboutUsImage from '../../../public/images/sec-about-us.png'
 
+import { motion } from 'framer-motion'
+
 export const AboutUs = () => {
+  const container = {
+    visible: {
+      y: 0,
+      transition: { duration: 1 },
+    },
+    hidden: {
+      y: 200,
+      transition: { duration: 1 },
+    },
+  }
   return (
-    <div>
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <InfoBanner image={aboutUsImage}>
         <div className="box-content flex w-[582px] flex-col gap-3 p-12 pr-0 text-grey-darkest">
           <h1 className="text-4xl font-semibold">О нас</h1>
@@ -19,6 +36,6 @@ export const AboutUs = () => {
           </p>
         </div>
       </InfoBanner>
-    </div>
+    </motion.div>
   )
 }
