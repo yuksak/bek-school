@@ -10,7 +10,7 @@ import gallery3 from '../../../public/images/gallery-pic-3.png'
 import gallery4 from '../../../public/images/gallery-pic-4.png'
 import gallery5 from '../../../public/images/gallery-pic-5.png'
 import gallery6 from '../../../public/images/gallery-pic-6.png'
-import { cardAnimation } from '../../../animation'
+import { cardAnimation, cardContainerAnimation } from '../../../animation'
 
 export const Gallery = () => {
   return (
@@ -22,7 +22,7 @@ export const Gallery = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          transition={{ staggerChildren: 0.5, delayChildren: 1 }}
+          transition={cardContainerAnimation}
         >
           {galleries.map(({ id, photo }) => (
             <motion.div key={id} variants={cardAnimation}>
