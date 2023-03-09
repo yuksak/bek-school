@@ -6,8 +6,9 @@
   html {
     @apply font-gilroy;
   }
-
   a {
     @apply text-light hover:text-yellow;
   }
+
+  @import './fonts.css';
 }
