@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         <Introduction />
         <div className="mx-auto my-24 flex max-w-[1142px] flex-col gap-24">
           <Hero />
-          <OurMission />
+          <OurMission text="first" image="pupil" />
           <Differences />
           <AboutUs />
           <Safety />
