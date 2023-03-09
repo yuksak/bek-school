@@ -1,11 +1,14 @@
-import '../styles/globals.css'
-import '../styles/fonts.css'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+
 import { navRoutes } from '../components/Header'
 import Layout from '../components/Layout'
+
 import { IBreadCrumbs } from '../types'
+
+import '../styles/globals.css'
+import '../styles/fonts.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter()
