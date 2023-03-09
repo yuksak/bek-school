@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FC } from 'react'
+import { FC, Fragment } from 'react'
 import { delay, motion } from 'framer-motion'
 
 import { IBreadCrumbs } from '../../types'
@@ -17,15 +17,15 @@ const BreadCrumb: FC<IBreadCrumbProps> = ({ breadCrumbs }) => {
     >
       {breadCrumbs.length && (
         <ol className="flex flex-row gap-2 text-grey">
-          {breadCrumbs.map(({ path, name }, i) => (
-            <>
-              <li key={path + name}>
+          {breadCrumbs.map(({ path, name, id }, i) => (
+            <Fragment key={id}>
+              <li key={id + i}>
                 <Link href={path} className="text-grey">
                   {name}
                 </Link>
               </li>
-              {i !== breadCrumbs.length - 1 && <span key={path + i}>/</span>}
-            </>
+              {i !== breadCrumbs.length - 1 && <span>/</span>}
+            </Fragment>
           ))}
         </ol>
       )}
