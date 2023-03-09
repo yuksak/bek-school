@@ -1,6 +1,6 @@
-import React from 'react'
 import { YMaps, Map, Placemark, ZoomControl } from '@pbe/react-yandex-maps'
 import { motion } from 'framer-motion'
+import { yandexVariant } from '../../animation'
 
 const YandexMap = () => {
   const defaultState = {
@@ -9,16 +9,11 @@ const YandexMap = () => {
     controls: [],
   }
 
-  const variant = {
-    visible: { opacity: 1, transition: { duration: 1, delay: 1 } },
-    hidden: { opacity: 0 },
-  }
-
   return (
     <YMaps>
       <motion.div
         className="overflow-hidden rounded-2xl"
-        variants={variant}
+        variants={yandexVariant}
         initial="hidden"
         whileInView="visible"
       >
