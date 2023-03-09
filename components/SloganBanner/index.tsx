@@ -20,7 +20,7 @@ const SloganBanner: FC<ISloganBannerProps> = ({ title, image, description, link,
       <div className=" mb-14 flex flex-row justify-between">
         <SectionTitle title={title} position="start" />
         <div className="w-[558px] text-grey-darkest">
-          <p className={link && 'mb-6'}>{description}</p>
+          <p className={`whitespace-pre-wrap ${link && 'mb-6'}`}>{description}</p>
           {link && <Button text="Подробнее" onClick={() => router.push(link)} />}
         </div>
       </div>
