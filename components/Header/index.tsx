@@ -8,10 +8,10 @@ import { ArrowDown2, Menu } from 'iconsax-react'
 import { motion } from 'framer-motion'
 
 export const navRoutes = [
-  { path: '/', name: 'Главная' },
-  { path: '/about-us', name: 'О нас' },
-  { path: '/system', name: 'Системы' },
-  { path: '/news', name: 'Новости' },
+  { id: 'nav-route-1', path: '/', name: 'Главная' },
+  { id: 'nav-route-2', path: '/about-us', name: 'О нас' },
+  { id: 'nav-route-3', path: '/system', name: 'Системы' },
+  { id: 'nav-route-4', path: '/news', name: 'Новости' },
 ]
 
 const contact = '+998 55 503-32-93'
