@@ -17,7 +17,7 @@ const AdmissionCard: FC<IAdmissionCardProps> = ({ index, description, info }) =>
         <div className="flex h-[51px] w-[51px] items-center justify-center rounded-full bg-yellow text-2xl font-semibold text-grey-darkest">
           {index}
         </div>
-        <p className="text-xl">
+        <p className="text-xl font-medium">
           {description} {info && <Chip>{info}</Chip>}
         </p>
       </div>

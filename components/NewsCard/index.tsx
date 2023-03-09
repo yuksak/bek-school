@@ -17,12 +17,12 @@ const NewsCard: FC<INewsCardProps> = ({ image, title, description, date }) => {
       variants={cardAnimation}
     >
       <div className=" rounded-2xl">
-        <Image src={image} alt="" width={267} height={190} />
+        <Image src={image} alt="" className="h-[190px] w-[267px]" width={1000} height={1000} />
       </div>
       <div className="flex flex-col gap-2">
         <h1 className="text-lg font-medium text-grey-darkest">{title}</h1>
         <p className="font-normal text-grey">{description}</p>
-        <time className="text-sm italic text-grey">{date}</time>
+        <time className="text-sm font-medium italic text-grey">{date}</time>
       </div>
     </motion.div>
   )

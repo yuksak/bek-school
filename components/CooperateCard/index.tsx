@@ -20,7 +20,7 @@ const CooperateCard: FC<ICooperateCardProps> = ({ image, title, description, pat
       className="flex w-[364px] flex-col gap-6 rounded-2xl bg-light-dark py-9 px-6"
     >
       <div className="flex flex-row items-center gap-6">
-        <Image src={image} alt="" />
+        <Image src={image} alt="" className="h-[87px] w-[87px]" width={87} height={87} />
         <h1 className=" text-xl font-semibold">{title}</h1>
       </div>
       <div>

@@ -9,8 +9,8 @@ const Button = ({ onClick, text, children }: IButton) => {
     <button
       onClick={onClick}
       className={`${
-        text ? 'rounded-xl py-3 px-5' : 'rounded-full p-3'
-      } border-dark-deep focus:border-dark-deep  flex gap-2 border border-transparent bg-yellow font-semibold hover:border-yellow hover:bg-transparent`}
+        text ? 'rounded-xl' : 'rounded-full p-3 '
+      } border-dark-deep focus:border-dark-deep box-border flex h-[72px] w-[182px] items-center justify-center gap-2 border border-transparent bg-yellow text-xl font-semibold hover:border-yellow hover:bg-transparent`}
     >
       {children && children} {text && text}
     </button>

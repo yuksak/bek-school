@@ -21,10 +21,10 @@ const ReviewsCard: FC<IReviewsCardProps> = ({ name, photo, description, date, ra
     >
       <div className="flex flex-row gap-3">
         <div>
-          <Image src={photo} width={45} height={45} alt="user photo" />
+          <Image src={photo} width={200} className="h-11 w-11" height={200} alt="user photo" />
         </div>
         <div>
-          <span className="text-lg font-medium">{name}</span>
+          <span className="text-lg font-semibold">{name}</span>
           <span className="flex flex-row gap-1">
             <AiFillStar className="text-yellow" />
             <AiFillStar className="text-yellow" />
@@ -35,7 +35,7 @@ const ReviewsCard: FC<IReviewsCardProps> = ({ name, photo, description, date, ra
         </div>
       </div>
       <p className="text-grey">{description}</p>
-      <time className=" text-sm italic text-grey-darkest">{date}</time>
+      <time className="text-sm font-medium italic text-grey-darkest">{date}</time>
     </motion.div>
   )
 }
