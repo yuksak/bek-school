@@ -39,6 +39,18 @@
 
   @font-face {
     font-family: 'Gilroy';
+    src: url('../public/fonts/Gilroy-Extrabold.eot');
+    src: url('../public/fonts/Gilroy-Extrabold.eot?#iefix') format('embedded-opentype'),
+      url('../public/fonts/Gilroy-Extrabold.woff2') format('woff2'),
+      url('../public/fonts/Gilroy-Extrabold.woff') format('woff'),
+      url('../public/fonts/Gilroy-Extrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
     src: url('../public/fonts/Gilroy-LightItalic.eot');
     src: url('../public/fonts/Gilroy-LightItalic.eot?#iefix') format('embedded-opentype'),
       url('../public/fonts/Gilroy-LightItalic.woff2') format('woff2'),
@@ -93,6 +105,18 @@
       url('../public/fonts/Gilroy-HeavyItalic.woff') format('woff'),
       url('../public/fonts/Gilroy-HeavyItalic.ttf') format('truetype');
     font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../public/fonts/Gilroy-ExtraboldItalic.eot');
+    src: url('../public/fonts/Gilroy-ExtraboldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../public/fonts/Gilroy-ExtraboldItalic.woff2') format('woff2'),
+      url('../public/fonts/Gilroy-ExtraboldItalic.woff') format('woff'),
+      url('../public/fonts/Gilroy-ExtraboldItalic.ttf') format('truetype');
+    font-weight: 800;
     font-style: italic;
     font-display: swap;
   }
