@@ -5,6 +5,7 @@ import { Call, Facebook, Instagram, Location, Sms } from 'iconsax-react'
 import ContactCard from '../../ContactCard'
 import SectionTitle from '../../SectionTitle'
 import YandexMap from '../../YandexMap'
+import { cardContainerAnimation } from '../../../animation'
 
 export const ContactUs = () => {
   return (
@@ -15,7 +16,7 @@ export const ContactUs = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+        transition={cardContainerAnimation}
       >
         {contacts.map(({ title, icon, path, content }) => (
           <ContactCard key={path} title={title} path={path} content={content}>

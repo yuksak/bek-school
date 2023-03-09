@@ -2,22 +2,12 @@ import { motion } from 'framer-motion'
 
 import SloganBanner from '../../SloganBanner'
 import missionImage from '../../../public/images/sec-mission-image.png'
+import { sectionAnimation } from '../../../animation'
 
 export const OurMission = () => {
-  const container = {
-    visible: {
-      y: 0,
-      transition: { duration: 1 },
-    },
-    hidden: {
-      y: 200,
-      transition: { duration: 1 },
-    },
-  }
-
   return (
     <motion.div
-      variants={container}
+      variants={sectionAnimation}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

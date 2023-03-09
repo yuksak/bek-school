@@ -3,37 +3,22 @@ import { motion } from 'framer-motion'
 
 import Logo from '../../Logo'
 import intro from '../../../public/images/intro.png'
+import { logoVariant, textVariant, titleVariant } from '../../../animation'
 
 export const Introduction = () => {
-  const titleVariant = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { delay: 0.5, duration: 1 } },
-  }
-
-  const textVariant = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
-  }
-
-  const logoVariant = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { delay: 2, duration: 1 } },
-  }
-
   return (
     <div className="text-center">
       <div className="relative">
         <Image
           src={intro}
           className="h-[723px] w-full object-cover"
-          width={1000}
-          height={1000}
+          width={4000}
+          height={4000}
           alt="intro background"
         />
-        <div className="absolute top-0 h-full w-full bg-grey-dark opacity-60"></div>
         <div className="absolute top-48  mx-auto flex w-full flex-col gap-8 text-light">
           <motion.h1
-            className="text-7xl font-semibold"
+            className="text-7xl font-bold leading-[84px]"
             variants={titleVariant}
             initial="hidden"
             animate="visible"
@@ -42,7 +27,7 @@ export const Introduction = () => {
             Всех и Каждого
           </motion.h1>
           <motion.p
-            className="text-2xl font-light"
+            className="text-2xl font-normal"
             variants={textVariant}
             initial="hidden"
             animate="visible"
@@ -50,7 +35,7 @@ export const Introduction = () => {
             Школа “Bek” future education
           </motion.p>
           <motion.div
-            className="mx-auto mt-28"
+            className="mx-auto mt-24"
             variants={logoVariant}
             initial="hidden"
             animate="visible"

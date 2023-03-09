@@ -1,15 +1,16 @@
 import { motion } from 'framer-motion'
+import { cardContainerAnimation } from '../../../animation'
 import AdmissionCard from '../../AdmissionCard'
 
 export const Admission = () => {
   const titleVariant = {
     hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { delay: 0.5, duration: 1 } },
+    visible: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.3 } },
   }
 
   const textVariant = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.3 } },
   }
 
   return (
@@ -19,7 +20,7 @@ export const Admission = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+        transition={cardContainerAnimation}
       >
         <motion.h1
           className="mt-10 text-center text-[42px] font-semibold text-grey-darkest"
@@ -28,7 +29,7 @@ export const Admission = () => {
           Как поступить в школу
         </motion.h1>
         <motion.p
-          className="mx-auto mb-12 w-[533px] text-center text-2xl text-grey"
+          className="mx-auto mb-12 w-[533px] text-center text-2xl font-medium leading-9 text-grey"
           variants={textVariant}
         >
           Поступление в школу состоит из нескольких простых шагов
@@ -38,7 +39,7 @@ export const Admission = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+          transition={cardContainerAnimation}
         >
           {admissionSteps.map((step, i) => (
             <AdmissionCard {...step} index={i + 1} key={step.description} />

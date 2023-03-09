@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 
 import DifferencesCard from '../../DifferencesCard'
 import SectionTitle from '../../SectionTitle'
+import { cardContainerAnimation } from '../../../animation'
 
 export const Differences = () => {
   return (
@@ -12,7 +13,7 @@ export const Differences = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+        transition={cardContainerAnimation}
       >
         {datas.map((data, i) => (
           <DifferencesCard {...data} orderNumber={i + 1} key={data.title} />

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 
 import SectionTitle from '../../SectionTitle'
 import ReviewsCard from '../../ReviewsCard'
+import { cardContainerAnimation } from '../../../animation'
 
 import photo1 from '../../../public/images/reviewer-1.png'
 import photo2 from '../../../public/images/reviewer-2.png'
@@ -13,7 +14,7 @@ export const Reviews = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+      transition={cardContainerAnimation}
     >
       <SectionTitle title="Отзывы" path="/reviews" />
       <div className="flex flex-row justify-between">

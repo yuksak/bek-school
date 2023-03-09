@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 
 import CooperateCard from '../../CooperateCard'
 import SectionTitle from '../../SectionTitle'
+import { cardContainerAnimation } from '../../../animation'
 
 import partnerImage1 from '../../../public/images/partner-1.png'
 import partnerImage2 from '../../../public/images/partner-2.png'
@@ -13,7 +14,7 @@ export const Cooperate = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
+      transition={cardContainerAnimation}
     >
       <SectionTitle title="Школа сотрудничает" />
       <div className="flex flex-row justify-between">

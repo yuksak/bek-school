@@ -14,7 +14,7 @@ import { cardAnimation } from '../../../animation'
 
 export const Gallery = () => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1 } }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.3 } }}>
       <SectionTitle title="Галерея" />
       <div className="flex flex-col items-center gap-10">
         <motion.div

@@ -1,23 +1,25 @@
 import { motion } from 'framer-motion'
+import { cardContainerAnimation } from '../../../animation'
 
 import SafetyCard from '../../SafetyCard'
 import SectionTitle from '../../SectionTitle'
 
 export const Safety = () => {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      transition={{ staggerChildren: 0.5, delayChildren: 0.5 }}
-      viewport={{ once: true }}
-    >
+    <div>
       <SectionTitle title="Безопасность и комфорт" />
-      <div className="flex flex-row flex-wrap justify-between gap-6">
+      <motion.div
+        className="flex flex-row flex-wrap justify-between gap-6"
+        initial="hidden"
+        whileInView="visible"
+        transition={cardContainerAnimation}
+        viewport={{ once: true }}
+      >
         {safeties.map((data, i) => (
           <SafetyCard {...data} orderNumber={i + 1} key={data.id} />
         ))}
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   )
 }
 

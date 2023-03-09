@@ -2,22 +2,12 @@ import { motion } from 'framer-motion'
 
 import InfoBanner from '../../InfoBanner'
 import image from '../../../public/images/hero.png'
+import { sectionAnimation } from '../../../animation'
 
 export const Hero = () => {
-  const container = {
-    visible: {
-      y: 0,
-      transition: { duration: 1 },
-    },
-    hidden: {
-      y: 200,
-      transition: { duration: 1 },
-    },
-  }
-
   return (
     <motion.div
-      variants={container}
+      variants={sectionAnimation}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
