@@ -1,3 +1,8 @@
+export const yandexVariant = {
+  visible: { opacity: 1, transition: { duration: 0.3 } },
+  hidden: { opacity: 0 },
+}
+
 export const cardAnimation = {
   hidden: { y: 20, opacity: 0 },
   visible: {
