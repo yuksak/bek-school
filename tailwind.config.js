@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: { gilroy: ['Gilroy'] },
+      fontFamily: { gilroy: ['Gilroy', 'sans-serif'] },
       colors: {
         grey: {
           DEFAULT: '#797C80',
