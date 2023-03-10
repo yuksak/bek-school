@@ -30,7 +30,7 @@ const SectionTitle: FC<ISectionTitleProps> = ({ title, path, position }) => {
             : `justify-${position ? position : 'center text-center'}`
         }`}
       >
-        <h1 className="w-full max-w-[590px] text-2xl font-bold leading-9 md:text-[42px] md:leading-[63px]">
+        <h1 className="w-full max-w-[590px] text-2xl font-bold leading-9 md:text-3xl lg:text-[42px] lg:leading-[63px]">
           {title}
         </h1>
         {path && (

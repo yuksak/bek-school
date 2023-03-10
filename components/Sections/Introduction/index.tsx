@@ -21,7 +21,7 @@ export const Introduction = () => {
             className=" text-[42px] font-bold leading-[50px] sm:text-7xl sm:leading-[84px]"
             variants={titleVariant}
             initial="hidden"
-            whileHover="visible"
+            whileInView="visible"
             viewport={{ once: true }}
           >
             Мы Любим <br />
@@ -31,7 +31,7 @@ export const Introduction = () => {
             className="text-lg font-normal sm:text-2xl"
             variants={textVariant}
             initial="hidden"
-            whileHover="visible"
+            whileInView="visible"
             viewport={{ once: true }}
           >
             Школа “Bek” future education
@@ -40,7 +40,7 @@ export const Introduction = () => {
             className="mx-auto mt-48 sm:mt-24"
             variants={logoVariant}
             initial="hidden"
-            whileHover="visible"
+            whileInView="visible"
             viewport={{ once: true }}
           >
             <Logo variant="grey" size={80} />
