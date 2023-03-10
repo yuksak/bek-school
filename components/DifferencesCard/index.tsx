@@ -10,7 +10,7 @@ interface IDifferencesCardProps {
 const DifferencesCard: FC<IDifferencesCardProps> = ({ orderNumber, title, description }) => {
   return (
     <motion.div
-      className="flex h-full w-full flex-col gap-4 rounded-2xl bg-light-dark p-6 md:h-[245px]"
+      className="flex h-full w-full flex-col flex-wrap gap-4 rounded-2xl bg-light-dark p-6 md:h-[245px] md:max-w-[364px]"
       variants={cardAnimation}
     >
       <div className="flex flex-row items-center gap-4">

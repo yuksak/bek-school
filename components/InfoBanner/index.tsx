@@ -3,18 +3,21 @@ import { FC, ReactNode } from 'react'
 interface IInfoBannerProps {
   children: ReactNode
   image: StaticImageData
+  message?: boolean
 }
 
-const InfoBanner: FC<IInfoBannerProps> = ({ children, image }) => {
+const InfoBanner: FC<IInfoBannerProps> = ({ children, image, message }) => {
   return (
-    <div className="flex flex-row flex-wrap items-center justify-between rounded-3xl bg-yellow-light">
+    <div className="flex flex-row flex-wrap items-center justify-end rounded-3xl bg-yellow-light md:flex-nowrap md:justify-between">
       {children}
-      <div className="relative flex h-full max-h-[410px] w-[419px] translate-y-5 rounded-3xl">
+      <div className="relative block h-[320px] w-[419px] rounded-3xl sm:h-[410px]">
         <Image
           priority={true}
           src={image}
           alt="info-banner"
-          className="rounded-3xl object-contain"
+          className={`absolute  rounded-3xl ${
+            message ? '-bottom-5 md:-bottom-[42px] lg:-bottom-[22px]' : 'bottom-0'
+          }`}
         />
       </div>
     </div>

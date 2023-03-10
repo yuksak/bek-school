@@ -13,7 +13,7 @@ export const Hero = () => {
       viewport={{ once: true }}
       className="h-full w-full"
     >
-      <InfoBanner image={image}>
+      <InfoBanner image={image} message={true}>
         <div className="box-content flex w-full flex-col gap-6 px-6  py-4 md:max-w-[582px] md:gap-16 md:p-12">
           <p className="text-grey-darkest">
             В школу дети приходят учиться, и ничто не должно мешать им в этом. Наша цель - воспитать
