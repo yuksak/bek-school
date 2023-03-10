@@ -17,7 +17,10 @@ const YandexMap = () => {
         initial="hidden"
         whileInView="visible"
       >
-        <Map defaultState={defaultState} className="h-[296px] w-full max-w-[1140px] md:h-[445px]">
+        <Map
+          defaultState={defaultState}
+          className="h-[296px] w-full max-w-[1140px] rounded-2xl md:h-[445px]"
+        >
           <ZoomControl options={{ adjustMapMargin: true }} />
           <Placemark
             geometry={[41.341176, 69.242969]}
