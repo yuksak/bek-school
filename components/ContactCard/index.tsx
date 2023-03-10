@@ -16,12 +16,12 @@ const ContactCard: FC<IContactedCardProps> = ({ title, content, path, children }
     <motion.div
       variants={cardAnimation}
       onClick={() => router.push(path)}
-      className="box-border flex w-[365px] cursor-pointer flex-row items-center gap-4 rounded-2xl border border-transparent bg-light-dark p-6 hover:border-grey"
+      className="box-border flex w-full max-w-full cursor-pointer flex-row items-center gap-4 rounded-2xl border border-transparent bg-light-dark p-6 hover:border-grey sm:max-w-[290px] md:max-w-[364px]"
     >
       <div className=" rounded-xl bg-light p-3">{children}</div>
       <div className="flex flex-col text-grey-darkest">
         <span className="text-sm font-medium">{title}</span>
-        <span className="text-lg font-bold">{content}</span>
+        <span className="text-base font-bold md:text-lg">{content}</span>
       </div>
     </motion.div>
   )

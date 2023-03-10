@@ -17,7 +17,7 @@ export const Reviews = () => {
       transition={cardContainerAnimation}
     >
       <SectionTitle title="Отзывы" path="/reviews" />
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row flex-wrap justify-between gap-6">
         {reviewers.map((reviewer) => (
           <ReviewsCard {...reviewer} key={reviewer.name} />
         ))}

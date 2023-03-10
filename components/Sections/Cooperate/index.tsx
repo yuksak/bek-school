@@ -17,7 +17,7 @@ export const Cooperate = () => {
       transition={cardContainerAnimation}
     >
       <SectionTitle title="Школа сотрудничает" />
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row flex-wrap justify-between gap-6">
         {cooperators.map((cooperator) => (
           <CooperateCard {...cooperator} key={cooperator.id} />
         ))}

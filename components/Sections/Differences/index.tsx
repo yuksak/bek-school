@@ -9,7 +9,7 @@ export const Differences = () => {
     <div>
       <SectionTitle title="Чем отличается школа “Bek” от других школ" />
       <motion.div
-        className="grid grid-flow-row grid-cols-3 gap-6"
+        className="flex flex-row flex-wrap gap-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

@@ -13,11 +13,17 @@ interface INewsCardProps {
 const NewsCard: FC<INewsCardProps> = ({ image, title, description, date }) => {
   return (
     <motion.div
-      className="box-border flex w-[267px] flex-col gap-2 overflow-hidden"
+      className="box-border flex w-full max-w-[327px] flex-col gap-2 overflow-hidden sm:max-w-full md:max-w-[267px]"
       variants={cardAnimation}
     >
-      <div className=" rounded-2xl">
-        <Image src={image} alt="" className="h-[190px] w-[267px]" width={1000} height={1000} />
+      <div className="overflow-hidden rounded-2xl">
+        <Image
+          src={image}
+          alt="news picture"
+          className="h-[190px] w-full max-w-[327px] object-cover sm:max-w-full md:max-w-[267px]"
+          width={1000}
+          height={1000}
+        />
       </div>
       <div className="flex flex-col gap-2">
         <h1 className="text-lg font-medium text-grey-darkest">{title}</h1>

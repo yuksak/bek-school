@@ -16,7 +16,7 @@ interface IReviewsCardProps {
 const ReviewsCard: FC<IReviewsCardProps> = ({ name, photo, description, date, rating }) => {
   return (
     <motion.div
-      className="flex w-[364px] flex-col gap-3 rounded-2xl bg-light-dark p-6"
+      className="flex w-full flex-col gap-3 rounded-2xl bg-light-dark px-4 py-5 md:max-w-[364px] md:p-6"
       variants={cardAnimation}
     >
       <div className="flex flex-row gap-3">

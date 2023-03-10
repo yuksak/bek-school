@@ -11,14 +11,14 @@ export const Introduction = () => {
       <div className="relative">
         <Image
           src={intro}
-          className="h-[723px] w-full object-cover"
+          className="h-[747px] w-full object-cover sm:h-[723px]"
           width={4000}
           height={4000}
           alt="intro background"
         />
-        <div className="absolute top-48  mx-auto flex w-full flex-col gap-8 text-light">
+        <div className="absolute top-48  mx-auto flex w-full flex-col gap-2 text-light sm:gap-8">
           <motion.h1
-            className="text-7xl font-bold leading-[84px]"
+            className=" text-[42px] font-bold leading-[50px] sm:text-7xl sm:leading-[84px]"
             variants={titleVariant}
             initial="hidden"
             animate="visible"
@@ -27,7 +27,7 @@ export const Introduction = () => {
             Всех и Каждого
           </motion.h1>
           <motion.p
-            className="text-2xl font-normal"
+            className="text-lg font-normal sm:text-2xl"
             variants={textVariant}
             initial="hidden"
             animate="visible"
@@ -35,12 +35,12 @@ export const Introduction = () => {
             Школа “Bek” future education
           </motion.p>
           <motion.div
-            className="mx-auto mt-24"
+            className="mx-auto mt-48 sm:mt-24"
             variants={logoVariant}
             initial="hidden"
             animate="visible"
           >
-            <Logo variant="grey" />
+            <Logo variant="grey" size={80} />
           </motion.div>
         </div>
       </div>

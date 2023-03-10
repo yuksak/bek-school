@@ -14,22 +14,22 @@ export const Admission = () => {
   }
 
   return (
-    <div className="flex justify-center rounded-3xl bg-light-dark p-20 pt-10">
+    <div className="flex justify-center rounded-3xl bg-light-dark px-4 py-6 md:p-20 md:pt-10">
       <motion.div
-        className="w-[752px]"
+        className="w-full max-w-[752px]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         transition={cardContainerAnimation}
       >
         <motion.h1
-          className="mt-10 text-center text-[42px] font-semibold text-grey-darkest"
+          className="mb-2 text-center text-2xl font-bold text-grey-darkest md:mt-10 md:text-[42px]"
           variants={titleVariant}
         >
           Как поступить в школу
         </motion.h1>
         <motion.p
-          className="mx-auto mb-12 w-[533px] text-center text-2xl font-medium leading-9 text-grey"
+          className="mx-auto mb-6 w-full max-w-[533px] text-center text-base font-medium leading-6 text-grey md:mb-12 md:text-2xl md:leading-9"
           variants={textVariant}
         >
           Поступление в школу состоит из нескольких простых шагов

@@ -13,11 +13,13 @@ interface IAdmissionCardProps {
 const AdmissionCard: FC<IAdmissionCardProps> = ({ index, description, info }) => {
   return (
     <motion.div variants={cardAnimation}>
-      <div className="flex w-[752px] flex-row items-center gap-5 rounded-2xl bg-light p-6">
-        <div className="flex h-[51px] w-[51px] items-center justify-center rounded-full bg-yellow text-2xl font-semibold text-grey-darkest">
-          {index}
+      <div className="flex w-full max-w-[752px] flex-row items-center gap-5 rounded-2xl bg-light p-6">
+        <div className=" rounded-full bg-yellow text-base font-semibold text-grey-darkest md:text-2xl">
+          <span className="flex h-9 w-9 items-center justify-center md:h-[51px] md:w-[51px]">
+            {index}
+          </span>
         </div>
-        <p className="text-xl font-medium">
+        <p className="whitespace-pre-wrap text-base font-medium md:text-xl">
           {description} {info && <Chip>{info}</Chip>}
         </p>
       </div>

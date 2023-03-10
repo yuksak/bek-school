@@ -14,7 +14,7 @@ export const News = () => {
     <div>
       <SectionTitle title="Новости" path="/news" />
       <motion.div
-        className="flex flex-row justify-between"
+        className="flex flex-row flex-wrap justify-center gap-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

@@ -9,7 +9,7 @@ export const Safety = () => {
     <div>
       <SectionTitle title="Безопасность и комфорт" />
       <motion.div
-        className="flex flex-row flex-wrap justify-between gap-6"
+        className="flex flex-row flex-wrap justify-between gap-3 md:gap-6"
         initial="hidden"
         whileInView="visible"
         transition={cardContainerAnimation}

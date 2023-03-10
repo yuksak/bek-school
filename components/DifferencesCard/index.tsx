@@ -10,12 +10,12 @@ interface IDifferencesCardProps {
 const DifferencesCard: FC<IDifferencesCardProps> = ({ orderNumber, title, description }) => {
   return (
     <motion.div
-      className="flex h-[245px] w-[365px] flex-col gap-4 rounded-2xl bg-light-dark p-6"
+      className="flex h-full w-full flex-col gap-4 rounded-2xl bg-light-dark p-6 md:h-[245px]"
       variants={cardAnimation}
     >
       <div className="flex flex-row items-center gap-4">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-yellow text-2xl font-semibold">
-          {orderNumber}
+        <div className="rounded-full bg-yellow text-2xl font-semibold">
+          <span className="flex h-[51px] w-[51px] items-center justify-center">{orderNumber}</span>
         </div>
         <h1 className="w-[249px] text-lg font-semibold leading-6 text-grey-darkest">{title}</h1>
       </div>

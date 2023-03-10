@@ -22,15 +22,15 @@ export const Experience = () => {
         link="/experience"
       >
         {/* <VideoPlayer src="https://youtu.be/a43-qyyeZ88" poster="/images/experience-thumbnail.png" /> */}
-        <iframe
-          className="rounded-3xl"
-          width="1142"
-          allowFullScreen
-          height="445"
-          src="https://www.youtube.com/embed/a43-qyyeZ88"
-          title="Школа Бек за Мир!"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        />
+        <div className="h-full sm:h-80 md:h-[445px]">
+          <iframe
+            className="h-full w-full rounded-3xl"
+            allowFullScreen
+            src="https://www.youtube.com/embed/a43-qyyeZ88"
+            title="Школа Бек за Мир!"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          />
+        </div>
       </SloganBanner>
     </motion.div>
   )

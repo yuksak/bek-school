@@ -12,7 +12,7 @@ export const ContactUs = () => {
     <div className="flex flex-col">
       <SectionTitle title="Свяжитесь с нами" />
       <motion.div
-        className="mb-6 grid grid-flow-row grid-cols-3 gap-6"
+        className="mb-6 flex flex-row flex-wrap gap-3 md:gap-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -38,8 +38,8 @@ const contacts = [
   },
   {
     title: 'Электронный адрес',
-    content: 'bekschool@gmail.com',
-    path: 'mailto:bekschool@gmail.com',
+    content: 'bk2344908@mail.ru',
+    path: 'mailto:bk2344908@mail.ru',
     icon: <Sms className="text-yellow" variant="Bold" />,
   },
   {

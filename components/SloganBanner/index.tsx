@@ -17,15 +17,21 @@ const SloganBanner: FC<ISloganBannerProps> = ({ title, image, description, link,
   const router = useRouter()
   return (
     <div>
-      <div className=" mb-14 flex flex-row justify-between">
+      <div className="mb-6 flex flex-row flex-wrap justify-between md:mb-14 md:flex-nowrap">
         <SectionTitle title={title} position="start" />
-        <div className="w-[558px] text-grey-darkest">
+        <div className="w-full max-w-[558px] text-grey-darkest">
           <p className={`whitespace-pre-wrap ${link && 'mb-6'}`}>{description}</p>
           {link && <Button text="Подробнее" onClick={() => router.push(link)} />}
         </div>
       </div>
       <div>
-        {image && <Image src={image} alt="Our mission pic" />}
+        {image && (
+          <Image
+            src={image}
+            className="min-h-[246px] rounded-lg object-cover md:rounded-2xl"
+            alt="Our mission pic"
+          />
+        )}
         {children && children}
       </div>
     </div>

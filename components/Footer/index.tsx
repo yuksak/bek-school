@@ -6,17 +6,17 @@ import Logo from '../Logo'
 
 const Footer = () => {
   return (
-    <footer className="mt-auto bg-grey-dark px-2 pt-16 pb-8">
-      <div className="mx-auto mb-10 flex w-[1142px] justify-between">
-        <div className="flex flex-col gap-6">
+    <footer className="mt-auto bg-grey-dark px-6 py-9 md:px-2 md:pt-16 md:pb-8">
+      <div className="mx-auto mb-10 flex max-w-[1140px] flex-wrap justify-between">
+        <div className="mb-12 flex flex-col gap-6 md:mb-0">
           <Logo variant="light" size={59} />
           <Socials />
         </div>
-        <div className="flex flex-row gap-28">
-          <ul className="grid grid-flow-row grid-cols-2 items-start gap-x-28 font-medium text-light">
+        <div className="flex flex-row flex-wrap gap-12 md:gap-28">
+          <ul className="grid grid-flow-row grid-cols-2 items-start gap-y-6 gap-x-10 font-medium text-light md:gap-x-28">
             {navRoutes.map(({ path, name }) => (
               <li key={name}>
-                <Link className="hover:text-yellow" href={path}>
+                <Link className="whitespace-nowrap hover:text-yellow" href={path}>
                   {name}
                 </Link>
               </li>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center">
-        <span className="text-grey">© BekSchool. Все права защищены.</span>
+        <span className="text-xs text-grey md:text-base">© BekSchool. Все права защищены.</span>
       </div>
     </footer>
   )
