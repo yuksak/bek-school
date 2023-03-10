@@ -27,7 +27,7 @@ const Home: NextPage = () => {
 
       <main>
         <Introduction />
-        <div className="mx-auto my-24 flex max-w-[1142px] flex-col gap-24">
+        <div className="container mx-auto my-12 flex flex-col gap-12 px-6 md:my-24 md:gap-24 md:px-0">
           <Hero />
           <OurMission text="first" image="pupil" />
           <Differences />
