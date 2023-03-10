@@ -17,7 +17,9 @@ const DifferencesCard: FC<IDifferencesCardProps> = ({ orderNumber, title, descri
         <div className="rounded-full bg-yellow text-2xl font-semibold">
           <span className="flex h-[51px] w-[51px] items-center justify-center">{orderNumber}</span>
         </div>
-        <h1 className="w-[249px] text-lg font-semibold leading-6 text-grey-darkest">{title}</h1>
+        <h1 className="w-full max-w-[249px] text-lg font-semibold leading-6 text-grey-darkest">
+          {title}
+        </h1>
       </div>
       <p className="text-grey">{description}</p>
     </motion.div>
