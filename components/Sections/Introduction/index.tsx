@@ -21,7 +21,8 @@ export const Introduction = () => {
             className=" text-[42px] font-bold leading-[50px] sm:text-7xl sm:leading-[84px]"
             variants={titleVariant}
             initial="hidden"
-            animate="visible"
+            whileHover="visible"
+            viewport={{ once: true }}
           >
             Мы Любим <br />
             Всех и Каждого
@@ -30,7 +31,8 @@ export const Introduction = () => {
             className="text-lg font-normal sm:text-2xl"
             variants={textVariant}
             initial="hidden"
-            animate="visible"
+            whileHover="visible"
+            viewport={{ once: true }}
           >
             Школа “Bek” future education
           </motion.p>
@@ -38,7 +40,8 @@ export const Introduction = () => {
             className="mx-auto mt-48 sm:mt-24"
             variants={logoVariant}
             initial="hidden"
-            animate="visible"
+            whileHover="visible"
+            viewport={{ once: true }}
           >
             <Logo variant="grey" size={80} />
           </motion.div>
