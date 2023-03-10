@@ -43,7 +43,7 @@ export const Introduction = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <Logo variant="grey" size={80} />
+            <Logo variant="grey" className="h-[80px] w-[152px] md:h-[112px] md:w-[216px]" />
           </motion.div>
         </div>
       </div>

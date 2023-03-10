@@ -34,7 +34,10 @@ export const Header = () => {
         } ${!isHome && 'bg-light'}`}
       >
         <div className="container mx-auto flex flex-wrap items-center justify-between">
-          <Logo variant={isHome && !isScrollable ? 'light' : 'dark'} size={46} />
+          <Logo
+            variant={isHome && !isScrollable ? 'light' : 'dark'}
+            className="h-[46px] w-[102px]"
+          />
           <button
             data-collapse-toggle="navbar-multi-level"
             type="button"

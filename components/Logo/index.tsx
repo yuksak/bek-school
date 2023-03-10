@@ -7,29 +7,25 @@ import logoGrey from '../../public/images/logo-grey.svg'
 
 interface ILogo {
   variant: 'light' | 'dark' | 'grey'
-  size?: number
+  className: string
 }
 
-const Logo = ({ variant, size }: ILogo) => {
+const Logo = ({ variant, className }: ILogo) => {
   let logoVariant
-  let height
 
   if (variant === 'light') {
     logoVariant = logoLight
-    height = size ? size : 51
   }
   if (variant === 'dark') {
     logoVariant = logoDark
-    height = size ? size : 59
   }
   if (variant === 'grey') {
     logoVariant = logoGrey
-    height = size ? size : 112
   }
 
   return (
     <Link href="/">
-      <Image src={logoVariant} height={height} className={`h-[${height}px]`} alt="Bek Logo" />
+      <Image src={logoVariant} height={1000} width={1000} className={className} alt="Bek Logo" />
     </Link>
   )
 }
