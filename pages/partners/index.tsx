@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 
-import { Gallery } from '../../components/Sections'
+import { Gallery, Partner } from '../../components/Sections'
 
 const Partners: NextPage = () => {
   return (
@@ -12,6 +12,7 @@ const Partners: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="mx-auto mt-9 mb-24 flex max-w-[1142px] flex-col gap-24">
+        <Partner />
         <Gallery />
       </main>
     </div>
