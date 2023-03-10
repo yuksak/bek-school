@@ -13,8 +13,8 @@ export const AboutUs = () => {
       viewport={{ once: true }}
     >
       <InfoBanner image={aboutUsImage}>
-        <div className="box-content flex w-full max-w-[582px] flex-col gap-3 p-3 text-grey-darkest md:p-12 md:pr-0">
-          <h1 className="text-4xl font-bold">О нас</h1>
+        <div className="box-content flex w-full max-w-[582px] flex-col gap-3 p-6 text-grey-darkest md:p-12 md:pr-0">
+          <h1 className="text-2xl font-bold md:text-4xl">О нас</h1>
           <p>
             Школа «Bek» оказывает образовательные услуги только на русском языке. Основные уроки
             проводятся по учебной программе, утверждённой МНО, но в процессе преподавания на уроках
