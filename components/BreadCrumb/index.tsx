@@ -11,7 +11,7 @@ interface IBreadCrumbProps {
 const BreadCrumb: FC<IBreadCrumbProps> = ({ breadCrumbs }) => {
   return (
     <motion.div
-      className="container mx-auto"
+      className="container mx-auto px-6 md:px-2"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 1 } }}
     >
