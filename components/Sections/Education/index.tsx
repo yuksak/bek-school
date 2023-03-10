@@ -13,8 +13,8 @@ export const Education = () => {
       viewport={{ once: true }}
     >
       <InfoBanner image={image}>
-        <div className="box-content flex w-[582px] flex-col gap-3 p-12">
-          <h1 className="text-4xl font-bold text-grey-darkest">Обучение</h1>
+        <div className="box-content flex w-[582px] flex-col gap-3 p-6 md:p-12">
+          <h1 className="text-2xl font-bold text-grey-darkest md:text-4xl">Обучение</h1>
           <p className="text-grey-darkest">
             Обучение ведется по Государственной Программе. Также у нас есть факультативы по
             математике, английскому языку, естественным предметам и IT (робототехника, электроника,

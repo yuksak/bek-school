@@ -15,16 +15,16 @@ export const Partner = () => {
       whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
       viewport={{ once: true }}
     >
-      <header className="flex flex-row justify-between rounded-3xl border border-yellow bg-yellow-light py-9 px-12">
+      <header className="flex flex-row flex-wrap justify-between rounded-3xl border border-yellow bg-yellow-light p-[22px] sm:flex-nowrap md:py-9 md:px-12">
         <div className="flex flex-row items-center gap-6">
           <Image
             src={partnerImg}
             alt="partner image"
-            className="h-[105px] w-[105px] rounded-full border border-yellow"
+            className="h-12 w-12 rounded-full border border-yellow md:h-[105px] md:w-[105px]"
           />
-          <h1 className="text-2xl font-semibold">Center for Advanced Technologies</h1>
+          <h1 className="text-lg font-semibold md:text-2xl">Center for Advanced Technologies</h1>
         </div>
-        <div className="flex items-center">
+        <div className="hidden items-center sm:flex">
           <Button text="Смотреть видео">
             <BsPlayCircleFill className="h-6 w-6" />
           </Button>
@@ -53,6 +53,11 @@ export const Partner = () => {
           российских, так и зарубежных изданий.
         </p>
       </main>
+      <div className="mx-auto mt-6 flex items-center sm:hidden">
+        <Button text="Смотреть видео">
+          <BsPlayCircleFill className="h-6 w-6" />
+        </Button>
+      </div>
     </motion.div>
   )
 }

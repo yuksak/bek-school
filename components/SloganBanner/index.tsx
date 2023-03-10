@@ -28,7 +28,7 @@ const SloganBanner: FC<ISloganBannerProps> = ({ title, image, description, link,
         {image && (
           <Image
             src={image}
-            className="min-h-[246px] rounded-lg object-cover md:rounded-2xl"
+            className="min-h-[246px] rounded-xl object-cover md:rounded-2xl"
             alt="Our mission pic"
           />
         )}

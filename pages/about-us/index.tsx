@@ -12,7 +12,7 @@ const AboutUs: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="mx-auto mt-9 mb-24 flex max-w-[1142px] flex-col gap-24">
+      <main className="container mx-auto mt-6 mb-24 flex flex-col gap-12 px-6 md:my-24 md:mt-9 md:gap-24 md:px-0">
         <OurMission text="second" image="teacher" />
         <Differences />
         <Education />
