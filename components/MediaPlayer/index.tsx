@@ -72,8 +72,8 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
         </Swiper>
 
         <div
-          className={`absolute bottom-4 h-[73px] w-full transition-all duration-150 ease-in sm:w-[550px] md:bottom-8 landscape:bottom-4 landscape:w-full sm:landscape:w-[550px] ${
-            hideControllers ? 'h-0' : ''
+          className={`absolute h-[73px] w-full transition-all duration-150 ease-in sm:w-[550px] landscape:w-full sm:landscape:w-[550px] ${
+            hideControllers ? '-bottom-16' : 'bottom-4 md:bottom-8'
           }`}
         >
           <Swiper
@@ -104,19 +104,20 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
               </SwiperSlide>
             ))}
           </Swiper>
+          <div
+            ref={navigationPrevRef}
+            className="absolute -left-[50px] bottom-5 z-30 hidden h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-grey-darkest/30 text-white backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 md:flex "
+          >
+            <HiChevronLeft className="h-6 w-6" />
+          </div>
+          <div
+            ref={navigationNextRef}
+            className="absolute -right-[50px] bottom-5 z-30 hidden h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-grey-darkest/30 text-white backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 md:flex"
+          >
+            <HiChevronRight className="h-6 w-6" />
+          </div>
         </div>
-        <div
-          ref={navigationPrevRef}
-          className="absolute left-[120px] bottom-[50px] z-30 hidden h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-grey-darkest/30 text-white backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 md:flex landscape:hidden"
-        >
-          <HiChevronLeft className="h-6 w-6" />
-        </div>
-        <div
-          ref={navigationNextRef}
-          className="absolute right-[120px] bottom-[50px] z-30 hidden h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-grey-darkest/30 text-white backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 md:flex landscape:hidden"
-        >
-          <HiChevronRight className="h-6 w-6" />
-        </div>
+
         <button
           className={`absolute right-6 top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-grey-dark text-light backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 ${
             hideControllers ? 'bg-grey-darkest/30' : 'bg-grey-dark'
