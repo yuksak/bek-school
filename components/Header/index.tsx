@@ -31,7 +31,6 @@ export const Header = () => {
 
   return (
     <>
-      <div className="fixed h-full w-full overflow-y-hidden bg-grey-darkest/30"></div>
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
