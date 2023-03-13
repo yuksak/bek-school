@@ -23,29 +23,32 @@ export const Gallery = () => {
       <SectionTitle title="Галерея" />
       <div className="flex flex-col items-center gap-10">
         <motion.div
-          className="flex flex-row flex-wrap justify-between gap-6"
+          className="flex flex-row flex-wrap justify-center gap-6 md:justify-between"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           transition={cardContainerAnimation}
         >
           {galleries.map(({ id, photo }, i) => (
-            <motion.div key={id} variants={cardAnimation}>
+            <motion.div
+              key={id}
+              variants={cardAnimation}
+              onClick={(e) => {
+                setOpenPhoto(true)
+                setPhotoOnClick(i)
+              }}
+            >
               <Image
                 src={photo}
                 alt="gallery photo"
                 className="cursor-pointer transition-all duration-150 ease-in hover:scale-105"
-                onClick={(e) => {
-                  setOpenPhoto(true)
-                  setPhotoOnClick(i)
-                }}
               />
             </motion.div>
           ))}
         </motion.div>
         <Button text="Показать больше" />
       </div>
-      {openPhoto && (
+      {!openPhoto && (
         <MediaPlayer images={galleries} playerCloser={setOpenPhoto} initialSlide={photoOnClick} />
       )}
     </motion.div>
