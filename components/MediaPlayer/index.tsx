@@ -30,7 +30,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
     <div className="fixed left-0 top-0 bottom-0 right-0 z-50 flex select-none items-center justify-center bg-grey-darkest md:bg-grey-darkest/50 ">
       <div className="relative mx-auto flex h-full w-full justify-center overflow-hidden rounded-3xl bg-grey-darkest md:max-h-[475px] md:max-w-[900px]">
         <Swiper
-          loop={true}
+          loop={false}
           spaceBetween={50}
           navigation={{ prevEl: navigationPrevRef.current, nextEl: navigationNextRef.current }}
           thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
@@ -49,7 +49,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
                   <>
                     <Image
                       src={photo}
-                      alt=""
+                      alt="image thumb"
                       width={2000}
                       height={2000}
                       className={`h-full w-full ${fullScreen ? 'object-cover' : 'object-contain'}`}
@@ -64,7 +64,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
           ))}
         </Swiper>
 
-        <div className="absolute bottom-2 w-[350px] sm:w-[550px] md:bottom-9">
+        <div className="absolute bottom-2 h-[73px] w-full sm:w-[550px] md:bottom-8">
           <Swiper
             onSwiper={setThumbsSwiper}
             loop={false}
@@ -73,7 +73,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
               768: {
                 slidesPerView: 5,
               },
-              100: { slidesPerView: 3.5 },
+              100: { slidesPerView: 3.25 },
             }}
             freeMode={true}
             watchSlidesProgress={true}
