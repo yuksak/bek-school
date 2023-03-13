@@ -83,7 +83,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
               <SwiperSlide key={id + 'thumbs'} className="h-[73px] w-[97px] rounded-xl">
                 <Image
                   src={photo}
-                  alt=""
+                  alt="slide image"
                   width={2000}
                   height={2000}
                   className={`cursor-pointer border-2 duration-200 ease-in hover:opacity-80 ${
