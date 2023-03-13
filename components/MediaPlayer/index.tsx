@@ -54,7 +54,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
                       height={2000}
                       className={`h-full w-full ${fullScreen ? 'object-cover' : 'object-contain'}`}
                     />
-                    <div className="absolute top-6 left-6 z-10 flex h-[46px] w-[85px] items-center justify-center rounded-xl bg-grey-darkest/30 text-lg font-bold text-light backdrop-blur-sm">
+                    <div className="absolute top-6 left-6 z-10 flex h-[46px] w-[85px] items-center justify-center rounded-xl bg-grey-dark text-lg font-bold text-light backdrop-blur-sm md:bg-grey-darkest/30">
                       {i + 1} / {images.length}
                     </div>
                   </>
@@ -64,7 +64,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
           ))}
         </Swiper>
 
-        <div className="absolute bottom-9 w-[400px] sm:w-[550px]">
+        <div className="absolute bottom-2 w-[350px] sm:w-[550px] md:bottom-9">
           <Swiper
             onSwiper={setThumbsSwiper}
             loop={false}
@@ -73,7 +73,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
               768: {
                 slidesPerView: 5,
               },
-              100: { slidesPerView: 3 },
+              100: { slidesPerView: 3.5 },
             }}
             freeMode={true}
             watchSlidesProgress={true}
@@ -107,13 +107,13 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
           <HiChevronRight className="h-6 w-6" />
         </div>
         <button
-          className="absolute right-6 top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-grey-darkest/30 text-light backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80"
+          className="absolute right-6 top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-grey-dark text-light backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 md:bg-grey-darkest/30"
           onClick={() => playerCloser(false)}
         >
           <HiOutlineX className="h-5 w-5" />
         </button>
         <button
-          className="absolute right-[90px] top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-grey-darkest/30 text-light backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80"
+          className="absolute right-[90px] top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-grey-dark text-light backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 md:bg-grey-darkest/30"
           onClick={() => setFullScreen((prev) => !prev)}
         >
           {!fullScreen ? (
