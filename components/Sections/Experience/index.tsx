@@ -22,7 +22,7 @@ export const Experience = () => {
         link="/experience"
       >
         {/* <VideoPlayer src="https://youtu.be/a43-qyyeZ88" poster="/images/experience-thumbnail.png" /> */}
-        <div className="h-full sm:h-80 md:h-[445px]">
+        <div className="h-[180px] sm:h-80 md:h-[445px]">
           <iframe
             className="h-full w-full rounded-3xl"
             allowFullScreen
