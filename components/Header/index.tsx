@@ -29,6 +29,10 @@ export const Header = () => {
   const isHome = pathname === '/'
   const isScrollable = scrollPosition > 1
 
+  useEffect(() => {
+    setIsBurgerOpen(false)
+  }, [pathname])
+
   return (
     <>
       <motion.nav
