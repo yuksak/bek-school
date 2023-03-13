@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 import BreadCrumb from '../BreadCrumb'
 import Footer from '../Footer'
-import { Header } from '../Header'
+import { Header, navRoutes } from '../Header'
 
 import { IBreadCrumbs } from '../../types'
 
@@ -15,11 +15,12 @@ interface ILayoutProps {
 const Layout: FC<ILayoutProps> = ({ children, breadCrumbs }) => {
   const { pathname } = useRouter()
   const isHome = pathname === '/'
+  const isErrorPage = navRoutes.filter((route) => pathname.includes(route.path))
 
   return (
     <div className="flex min-h-screen flex-col content-center">
       <Header />
-      {!isHome && <BreadCrumb breadCrumbs={breadCrumbs} />}
+      {!isHome && !isErrorPage && <BreadCrumb breadCrumbs={breadCrumbs} />}
       <main>{children}</main>
       <Footer />
     </div>
