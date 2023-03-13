@@ -70,7 +70,7 @@ export const Header = () => {
               ))}
             </ul>
           </div>
-          {/* <div>
+          <div className="hidden md:block">
             <Link
               href={`tel:${contact}`}
               className={`text-xl font-semibold ${
@@ -79,7 +79,7 @@ export const Header = () => {
             >
               {contact}
             </Link>
-          </div> */}
+          </div>
         </div>
       </motion.nav>
       {!isHome && <div className="h-[91px] w-full bg-light"></div>}
