@@ -15,8 +15,13 @@ import gallery6 from '../../../public/images/gallery-pic-6.png'
 import { cardAnimation, cardContainerAnimation } from '../../../animation'
 
 export const Gallery = () => {
-  const [openPhoto, setOpenPhoto] = useState<boolean>(true)
+  const [openPhoto, setOpenPhoto] = useState<boolean>(false)
   const [photoOnClick, setPhotoOnClick] = useState<number>(0)
+
+  const imageClickHandler = (i: number) => {
+    setOpenPhoto(true)
+    setPhotoOnClick(i)
+  }
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.3 } }}>
@@ -30,25 +35,19 @@ export const Gallery = () => {
           transition={cardContainerAnimation}
         >
           {galleries.map(({ id, photo }, i) => (
-            <motion.div
-              key={id}
-              variants={cardAnimation}
-              onClick={(e) => {
-                setOpenPhoto(true)
-                setPhotoOnClick(i)
-              }}
-            >
+            <motion.div key={id} variants={cardAnimation}>
               <Image
                 src={photo}
                 alt="gallery photo"
                 className="cursor-pointer transition-all duration-150 ease-in hover:scale-105"
+                onClick={() => imageClickHandler(i)}
               />
             </motion.div>
           ))}
         </motion.div>
         <Button text="Показать больше" />
       </div>
-      {!openPhoto && (
+      {openPhoto && (
         <MediaPlayer images={galleries} playerCloser={setOpenPhoto} initialSlide={photoOnClick} />
       )}
     </motion.div>
