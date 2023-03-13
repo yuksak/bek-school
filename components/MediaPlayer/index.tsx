@@ -23,6 +23,8 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
   const [activeSlide, setActiveSlide] = useState<string>('')
   const [fullScreen, setFullScreen] = useState<boolean>(false)
 
+  const [hideControllers, setHideControllers] = useState<boolean>(true)
+
   const navigationPrevRef = useRef<HTMLDivElement>(null)
   const navigationNextRef = useRef<HTMLDivElement>(null)
 
@@ -36,7 +38,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
           thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
           modules={[FreeMode, Navigation, Thumbs]}
           initialSlide={initialSlide}
-          className="relative w-[900px] md:h-[475px]"
+          className=" relative w-[900px] md:h-[475px]"
         >
           {images.map(({ id, photo }, i) => (
             <SwiperSlide key={id}>
@@ -52,9 +54,14 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
                       alt="image thumb"
                       width={2000}
                       height={2000}
-                      className={`h-full w-full ${fullScreen ? 'object-cover' : 'object-contain'}`}
+                      className={` h-full w-full ${fullScreen ? 'object-cover' : 'object-contain'}`}
+                      onClick={() => setHideControllers((prev) => !prev)}
                     />
-                    <div className="absolute top-6 left-6 z-10 flex h-[46px] w-[85px] items-center justify-center rounded-xl bg-grey-dark text-lg font-bold text-light backdrop-blur-sm md:bg-grey-darkest/30">
+                    <div
+                      className={`absolute top-6 left-6 z-10 flex h-[46px] w-[85px] items-center justify-center rounded-xl text-lg font-bold  text-light backdrop-blur-sm duration-200 ease-in ${
+                        hideControllers ? 'bg-grey-darkest/30' : 'bg-grey-dark'
+                      }`}
+                    >
                       {i + 1} / {images.length}
                     </div>
                   </>
@@ -64,7 +71,11 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
           ))}
         </Swiper>
 
-        <div className="absolute bottom-4 h-[73px] w-full sm:w-[550px] md:bottom-8 landscape:bottom-4 landscape:w-full sm:landscape:w-[550px]">
+        <div
+          className={`absolute bottom-4 h-[73px] w-full transition-all duration-150 ease-in sm:w-[550px] md:bottom-8 landscape:bottom-4 landscape:w-full sm:landscape:w-[550px] ${
+            hideControllers ? 'h-0' : ''
+          }`}
+        >
           <Swiper
             onSwiper={setThumbsSwiper}
             loop={false}
@@ -86,7 +97,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
                   alt="slide image"
                   width={2000}
                   height={2000}
-                  className={`cursor-pointer border-2 duration-200 ease-in hover:opacity-80 ${
+                  className={`border-2 duration-200 ease-in hover:opacity-80 ${
                     id === activeSlide ? 'rounded-xl border-light' : 'border-transparent opacity-60'
                   }`}
                 />
@@ -107,13 +118,17 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
           <HiChevronRight className="h-6 w-6" />
         </div>
         <button
-          className="absolute right-6 top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-grey-dark text-light backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 md:bg-grey-darkest/30"
+          className={`absolute right-6 top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-grey-dark text-light backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 ${
+            hideControllers ? 'bg-grey-darkest/30' : 'bg-grey-dark'
+          }`}
           onClick={() => playerCloser(false)}
         >
           <HiOutlineX className="h-5 w-5" />
         </button>
         <button
-          className="absolute right-[90px] top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-grey-dark text-light backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 md:bg-grey-darkest/30"
+          className={`absolute right-[90px] top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-grey-dark text-light backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 ${
+            hideControllers ? 'bg-grey-darkest/30' : 'bg-grey-dark'
+          }`}
           onClick={() => setFullScreen((prev) => !prev)}
         >
           {!fullScreen ? (
