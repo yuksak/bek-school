@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FC, Fragment } from 'react'
-import { delay, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import { IBreadCrumbs } from '../../types'
 
