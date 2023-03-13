@@ -28,7 +28,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
 
   return (
     <div className="fixed left-0 top-0 bottom-0 right-0 z-50 flex select-none items-center justify-center bg-grey-darkest md:bg-grey-darkest/50 ">
-      <div className="relative mx-auto flex h-full max-h-[475px] w-full max-w-[900px] justify-center overflow-hidden rounded-3xl bg-grey-darkest">
+      <div className="relative mx-auto flex h-full w-full justify-center overflow-hidden rounded-3xl bg-grey-darkest md:max-h-[475px] md:max-w-[900px]">
         <Swiper
           loop={true}
           spaceBetween={50}
@@ -36,7 +36,7 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
           thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
           modules={[FreeMode, Navigation, Thumbs]}
           initialSlide={initialSlide}
-          className="relative h-[475px] w-[900px]"
+          className="relative w-[900px] md:h-[475px]"
         >
           {images.map(({ id, photo }, i) => (
             <SwiperSlide key={id}>
@@ -64,12 +64,17 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
           ))}
         </Swiper>
 
-        <div className="absolute bottom-9 w-[550px]">
+        <div className="absolute bottom-9 w-[400px] sm:w-[550px]">
           <Swiper
             onSwiper={setThumbsSwiper}
             loop={false}
             spaceBetween={10}
-            slidesPerView={5}
+            breakpoints={{
+              768: {
+                slidesPerView: 5,
+              },
+              100: { slidesPerView: 3 },
+            }}
             freeMode={true}
             watchSlidesProgress={true}
             modules={[FreeMode, Thumbs]}
@@ -91,13 +96,13 @@ const MediaPlayer: FC<IMediaPlayerProps> = ({ images, playerCloser, initialSlide
         </div>
         <div
           ref={navigationPrevRef}
-          className="absolute left-[120px] bottom-[50px] z-30 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-grey-darkest/30 text-white backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80"
+          className="absolute left-[120px] bottom-[50px] z-30 hidden h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-grey-darkest/30 text-white backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 md:flex"
         >
           <HiChevronLeft className="h-6 w-6" />
         </div>
         <div
           ref={navigationNextRef}
-          className="absolute right-[120px] bottom-[50px] z-30 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-grey-darkest/30 text-white backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80"
+          className="absolute right-[120px] bottom-[50px] z-30 hidden h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-grey-darkest/30 text-white backdrop-blur-sm duration-200 ease-in hover:bg-grey-darkest/80 md:flex"
         >
           <HiChevronRight className="h-6 w-6" />
         </div>
